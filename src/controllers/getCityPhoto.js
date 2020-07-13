@@ -6,7 +6,7 @@ async function getCityPhoto (ctx){
     const {cities} = ctx.query;
     const PHOTO_API_URL = "https://api.unsplash.com/search/photos/";
     const API_KEY=process.env.PHOTO_KEY;
-
+    //store the city data for later use
     if(cache.has(cities)){
         ctx.body = cache.get(cities);
         return;
