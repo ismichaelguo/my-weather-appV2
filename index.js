@@ -33,6 +33,8 @@ app.use(
 app.use(bodyParser());
 app.use(router.routes());
 
-app.listen(8080, () => {
-  console.log("the server is listening on 8080");
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log("the server is listening");
 });
