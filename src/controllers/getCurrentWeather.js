@@ -10,7 +10,7 @@ async function getCurrentWeather (ctx){
         ctx.body = cache.get(cities)
         return;
     }
-    APP_ID=process.env.PHOTO_KEY;
+    APP_ID=process.env.WEATHER_KEY;
     const weatherRequestUrl = `${WEATHER_API_URL}?key=${APP_ID}&city=${cities}`;
     const res = await fetch(weatherRequestUrl);
 
