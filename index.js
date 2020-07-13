@@ -8,7 +8,7 @@ const Static = require('koa-static');
 
 const app = new Koa();
 const router = require('./src/routers/router');
-app.use(Static("./my-weather-app/build"));
+app.use(Static("./front-end/my-weather-app/build"));
 
 
 
