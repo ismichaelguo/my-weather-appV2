@@ -1,0 +1,29 @@
+/*media query*/
+// Small tablets and large smartphones (landscape view)
+$screen-small-max: 375px;
+
+// Small tablets (portrait view)
+$screen-medium-max: 768px;
+
+$small-size-lopTop: 1100px;
+
+@mixin ipad() {
+  @media (max-width: #{$screen-medium-max}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: $small-size-lopTop) {
+    @content;
+  }
+}
+
+@mixin iphone() {
+  @media (max-width: #{$screen-small-max}) {
+    @content;
+  }
+}
+
+$blueV1: #7db1f0;
+$blueV2: #f2fbff;
+$blueV3: #110d3c;

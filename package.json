@@ -1,0 +1,21 @@
+{
+  "name": "my-weather-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd my-weather-app && npm install && npm run build",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-oas3": "^1.0.0",
+    "koa-router": "^9.1.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "node-fetch": "^2.6.0"
+  }
+}

@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  title: APIS
+  description: APIS for weather app
+  version: 1.0.0
+paths:
+  /forecast/hourly: 
+    get:
+      summary: Get current weather data
+      description: get Get current weather data by city name
+      tags:
+        - Weather
+      parameters:
+        - in: query
+          name: cities
+          description: city name
+          schema: 
+            type: string
+      responses:
+        "200":
+          description: Weather data response
+        "500":
+          description: Internal Server Error
+  /forecast/daily:
+    get:
+      summary: Get forecast weather data
+      description: Get forecast weather data by city name
+      tags:
+        - Weather
+      parameters:
+        - in: query
+          name: cities
+          description: city name
+          schema: 
+            type: string
+      responses:
+        "200":
+          description: Weather data response
+        "500":
+          description: Internal Server Error
+  /search/photos:
+    get:
+      summary: Get city photo data
+      description: Get city photo data by city name
+      tags:
+        - Photo
+      parameters:
+        - in: query
+          name: cities
+          description: city name
+          schema: 
+            type: string
+      responses:
+        "200":
+          description: Photo data response
+        "500":
+          description: Internal Server Error

@@ -1,0 +1,57 @@
+@import '../../config.scss';
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 110px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform: none;
+  position: relative;
+
+
+  &__deleteBtn{
+    font-size: 1.4rem;
+    position: absolute;
+    top:-0.9rem;
+    left:5.9rem;
+    color:$blueV3;
+    cursor: pointer;
+    z-index: 100;
+
+    & svg{
+      pointer-events: none;
+      border-radius: 5px;
+
+    }
+
+    &:hover{
+      color: red;
+      transform: scale(1.1);
+    }
+
+  }
+
+  @include iphone(){
+      margin-right: 0.3rem;
+  }
+
+  &__image {
+    height: 106px;
+    width: 96px;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: #110d3c;
+    text-transform: uppercase;
+    //can't be selected
+    pointer-events: none;
+  }
+}
+
+.card--selected {
+  transform: scale(1.1);
+}

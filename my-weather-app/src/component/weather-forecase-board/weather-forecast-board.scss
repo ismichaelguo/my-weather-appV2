@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import "../../config.scss";
+
+.days {
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  @include iphone() {
+    width: 220px;
+    height: 270px;
+    position: relative;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  &__container {
+    @include iphone() {
+      position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+
+      left: 0;
+      top: 0;
+      width: 700%; /* 横向排列 5张图片 宽度应为主容器5倍 */
+      height: 100%;
+      font-size: 0;
+      transform: translate(0, 0); /* 初始位置位移 */
+      animation: loop 15s linear infinite;
+    }
+  }
+}
+
+.weatherCard {
+  display: flex;
+  margin-right: 5rem;
+  margin-left: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  color: #110d3c;
+  font-family: "Lato";
+
+  @include iphone() {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    width: 220px;
+    height: 270px;
+    border: 1px solid white;
+    background-color: $blueV3;
+    opacity: 0.75;
+    color: white;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+  }
+
+  & h4 {
+    width: 4rem;
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+
+    @include iphone() {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.2rem !important;
+      font-weight: 500;
+      color: white;
+      width: 3.5rem;
+    }
+  }
+
+  & h5 {
+    width: 3rem;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__humidity {
+    width: 2rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include iphone() {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      width: 3rem;
+    }
+
+    & img {
+      width: 0.8rem;
+      height: 0.8rem;
+
+      @include iphone() {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    @include iphone() {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__minTemp {
+    width: 2rem;
+    display: flex;
+    @include iphone() {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      width: 3rem;
+    }
+
+    & img {
+      width: 1rem;
+      height: 1rem;
+      @include iphone() {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  &__maxTemp {
+    width: 2rem;
+    display: flex;
+
+    @include iphone() {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      width: 3rem;
+    }
+
+    & img {
+      width: 1rem;
+      height: 1rem;
+      @include iphone() {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  & p {
+    width: 0.9rem;
+    margin: 0;
+    padding-left: 0.3rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, 0);
+  } /* 停留1500ms */
+
+  14% {
+    transform: translate(-14.3%, 0);
+  } /* 切换500ms 位移-20% */
+  24% {
+    transform: translate(-14.3%, 0);
+  }
+
+  28% {
+    transform: translate(-28.5%, 0);
+  }
+  38% {
+    transform: translate(-28.5%, 0);
+  }
+
+  44% {
+    transform: translate(-42.9%, 0);
+  }
+  54% {
+    transform: translate(-42.9%, 0);
+  }
+
+  58% {
+    transform: translate(-57.2%, 0);
+  }
+  68% {
+    transform: translate(-57.2%, 0);
+  }
+
+  72% {
+    transform: translate(-71.5, 0);
+  }
+  82% {
+    transform: translate(-71.5%, 0);
+  }
+
+  86% {
+    transform: translate(-85.8, 0);
+  }
+  96% {
+    transform: translate(-85.8%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  } /* 复位到第一张图片 */
+}
