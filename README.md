@@ -61,8 +61,8 @@ This weather app is also supported on iPhone and iPad.
 - City Photo Data is retrieved from http://www.unsplash.com
 - To run this app, you'll need a Weatherbit API key and Unsplash API key.
 1. Create your account and get your API keys from the above API addresses.
-2. Open the project and go to the `.env.development` file.
-3. Enter your API keys.
+2. Open the project and go to the `config/default.json` file.
+3. Enter your API keys under `API`.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 

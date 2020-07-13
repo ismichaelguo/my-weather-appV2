@@ -4,8 +4,8 @@
         "port": 8080 
     },
     "API": {
-        "WEATHER_KEY": "45ba571f29c54202a86d5d62ca83141a" ,
-        "PHOTO_KEY": "BHJyBbJMrYRBqHzYuivvgBVspMShqGua5e0W1BvBkrA"
+        "WEATHER_KEY": "" ,
+        "PHOTO_KEY": ""
     },
     "Log4js": {
         "appenders": {
