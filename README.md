@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=500px height=350px border-radius=20px src="/public/layout.png" alt="logo"></a>
+ <img width=500px height=350px border-radius=20px src="/front-end/my-weather-app/public/layout.png" alt="logo"></a>
 </p>
 
 <h3 align="center">Weather App</h3>
