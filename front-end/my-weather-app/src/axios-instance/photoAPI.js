@@ -1,6 +1,6 @@
 import axios from 'axios';
 const axiosPhoto = axios.create({
-    baseURL:process.env || "http://localhost:8080",
+    baseURL:"https://weather-app-michael.herokuapp.com/",
     timeout:5000,
 })
 
