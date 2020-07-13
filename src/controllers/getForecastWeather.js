@@ -9,7 +9,7 @@ async function getForecastWeather (ctx){
         ctx.body = cache.get(cities);
         return;
     }
-    APP_ID="45ba571f29c54202a86d5d62ca83141a";
+    APP_ID=process.env.WEATHER_KEY;
     const weatherRequestUrl = `${WEATHER_API_URL}?key=${APP_ID}&city=${cities}`;
     const res = await fetch(weatherRequestUrl);
 
