@@ -1,0 +1,48 @@
+
+{
+    "App": {
+        "port": 8080 
+    },
+    "API": {
+        "WEATHER_KEY": "45ba571f29c54202a86d5d62ca83141a" ,
+        "PHOTO_KEY": "BHJyBbJMrYRBqHzYuivvgBVspMShqGua5e0W1BvBkrA"
+    },
+    "Log4js": {
+        "appenders": {
+            "error": {
+                "category": "errorLogger", 
+                "type": "dateFile", 
+                "filename": "logs/error/error", 
+                "alwaysIncludePattern": true, 
+                "pattern": "yyyy-MM-dd-hh.log" 
+            },
+            "response": {
+                "category": "resLogger",
+                "type": "dateFile",
+                "filename": "logs/response/response",
+                "alwaysIncludePattern": true,
+                "pattern": "yyyy-MM-dd-hh.log"
+            }
+        },
+        "categories": {
+            "error": {
+                "appenders": [
+                    "error"
+                ],
+                "level": "error"
+            },
+            "response": {
+                "appenders": [
+                    "response"
+                ],
+                "level": "info"
+            },
+            "default": {
+                "appenders": [
+                    "response"
+                ],
+                "level": "info"
+            }
+        }
+    }
+}

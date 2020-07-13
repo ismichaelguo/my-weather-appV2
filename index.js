@@ -3,6 +3,8 @@ const bodyParser = require("koa-bodyparser");
 const { oas } = require("koa-oas3");
 const cors = require('koa2-cors');
 const Static = require('koa-static');
+const config =require('config');
+const CONFIG_PORT = config.get("App.port")
 
 
 
@@ -34,7 +36,7 @@ app.use(bodyParser());
 app.use(router.routes());
 
 //heroku will distribute port randomly
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || CONFIG_PORT;
 
 app.listen(PORT, () => {
   console.log("the server is listening");

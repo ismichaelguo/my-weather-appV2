@@ -13,9 +13,9 @@
 
 ---
 
-<p align="center"> 🍔 A simple weather application built with <b>React.js</b>, <b>Redux</b> and <b>SASS</b>
+<p align="center"> 🍔 A simple weather application built with <b>React.js</b>, <b>KOA</b> and <b>REST API</b>
 <br>
-<a href="http://weather-app-michael.s3-website.us-east-2.amazonaws.com/">Demo Link</a>
+<a href="https://weather-app-michael.herokuapp.com/">Demo Link</a>
 </p>
 
 ## 📝 Table of Contents
@@ -42,12 +42,16 @@ This weather app is also supported on iPhone and iPad.
 </p>
 
 ## 🎥 Demo <a name = "demo"></a>
-- Demo URL: http://weather-app-michael.s3-website.us-east-2.amazonaws.com/
+- Demo URL: https://weather-app-michael.herokuapp.com/
 
 ## 💭 How it works <a name = "working"></a>
 
 - This Web App is developed based on `React.js`;
-- `Fetch API` is used to send HTTP requests to fetch the weather data;
+- `Axios` is used to send HTTP requests to fetch the weather and photo data;
+- wrapped existing APIs with `KOA.js` to build frontend
+- Designing `RESTful APIs` to communicate with the frontend
+- Deployed the build version to web serverless solution `Heroku`
+- Applying `CI/CD `through connected repository hosted on `github`
 - `Eslint` used to inspect the problematic code;
 - Followed the principle of Thinking in React to build reusable, maintainable and readable components and applications.
 

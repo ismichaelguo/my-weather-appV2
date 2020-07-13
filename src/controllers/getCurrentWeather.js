@@ -1,5 +1,8 @@
 const fetch = require('node-fetch');
 const cache = new Map();
+const config = require('config'); // 引入config
+const WEATHER_KEY = config.get('API.WEATHER_KEY');
+
 
 
 async function getCurrentWeather (ctx){
@@ -10,7 +13,7 @@ async function getCurrentWeather (ctx){
         ctx.body = cache.get(cities)
         return;
     }
-    APP_ID=process.env.WEATHER_KEY;
+    APP_ID= WEATHER_KEY || process.env.WEATHER_KEY;
     const weatherRequestUrl = `${WEATHER_API_URL}?key=${APP_ID}&city=${cities}`;
     const res = await fetch(weatherRequestUrl);
 
