@@ -33,6 +33,7 @@ app.use(
 app.use(bodyParser());
 app.use(router.routes());
 
+//heroku will distribute port randomly
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
