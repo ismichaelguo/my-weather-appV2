@@ -10,7 +10,7 @@
     "aws-amplify": "^3.0.20",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
